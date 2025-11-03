@@ -8,6 +8,7 @@ Github: https://www.github.com/debmallardasgupta
 
 import random
 from words import words
+from hangmanVisual import display_hangman
 import string
 
 
@@ -29,6 +30,9 @@ def hangman():
 
     # getting user input
     while len(word_letters) > 0 and lives > 0:
+        # Display hangman visual
+        print(display_hangman(lives))
+        
         # letters used
         # ' '.join(['a', 'b', 'cd']) --> 'a b cd'
         print('You have', lives, 'lives left and you have used these letters: ', ' '.join(used_letters))
@@ -56,6 +60,7 @@ def hangman():
 
     # gets here when len(word_letters) == 0 OR when lives == 0
     if lives == 0:
+        print(display_hangman(lives))
         print('You died, sorry. The word was', word)
     else:
         print('YAY! You guessed the word', word, '!!')
