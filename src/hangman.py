@@ -7,8 +7,8 @@ Github: https://www.github.com/debmallardasgupta
 
 
 import random
-from word_bank import word_bank
-from hangmanVisual import display_hangman
+from src.word_bank import word_bank
+from src.hangmanVisual import display_hangman
 import string
 
 
