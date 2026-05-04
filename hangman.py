@@ -20,7 +20,7 @@ def get_valid_word(words):
     return word.upper()
 
 
-def hangman():
+def start_game():
     word = get_valid_word(word_bank)
     word_letters = set(word)  # letters in the word
     alphabet = set(string.ascii_uppercase)
@@ -64,7 +64,3 @@ def hangman():
         print('You died, sorry. The word was', word)
     else:
         print('YAY! You guessed the word', word, '!!')
-
-
-if __name__ == '__main__':
-    hangman()
